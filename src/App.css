@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.small-faded {
+  font-size: small; /* Makes it smaller */
+  opacity: 0.7; /* Makes it slightly faded */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
