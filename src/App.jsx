@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import { generateMnemonic } from "bip39";
 import './App.css'
+import SolanaWallet from './SolanaWallet';
 
 function App() {
     const [mnemonic, setMnemonic] = useState("");
+
   return (
     <>
     <button className='card' onClick={async function(){
       const mn = await generateMnemonic();
       setMnemonic(mn)
-      console.log(mnemonic);
     }}>Click to generate seed phrase</button>
 
-    <p className="read-the-docs">{mnemonic}
+    <p className="read-the-docs">{mnemonic}  </p>
       <br />
     <button className='small-faded'
       onClick={() => {
@@ -20,9 +21,9 @@ function App() {
         alert("Copied to clipboard!");
       }}
       >
-        Copy
+        Copy Mnemonic to clipboard
     </button>
-    </p>
+    <SolanaWallet mnemonic={mnemonic} />
     </>
   )
 }
