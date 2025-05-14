@@ -13,7 +13,7 @@ function App() {
       setMnemonic(mn)
     }}>Click to generate seed phrase</button>
 
-    <p className="read-the-docs">{mnemonic}  </p>
+    <p className="read-the-docs blur-text">{mnemonic}  </p>
       <br />
     <button className='small-faded'
       onClick={() => {

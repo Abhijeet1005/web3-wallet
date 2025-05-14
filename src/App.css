@@ -12,6 +12,16 @@
   margin: 1rem;
 }
 
+.blur-text {
+  filter: blur(3px);
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out;
+}
+
+.blur-text:hover {
+  filter: none;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
